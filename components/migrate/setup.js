@@ -81,9 +81,7 @@ export default function Setup() {
   const [toAssetOptions, setToAssetOptions] = useState([]);
   const [selectedValue, setSelectedValue] = React.useState("a");
 
-  const handleRadioChange = (event) => {
-    setSelectedValue(event.target.value);
-  };
+
 
   function ValueLabelComponent(props) {
     const { children, value } = props;
@@ -221,7 +219,7 @@ export default function Setup() {
       } else {
         setFromAssetValue(value);
       }
-      getPairDetails(value.address, toAssetValue.address);
+       getPairDetails(value.address, toAssetValue.address);
     } else {
       if (value.address === fromAssetValue.address) {
         setFromAssetError(toAssetValue);
@@ -229,7 +227,7 @@ export default function Setup() {
       } else {
         setToAssetValue(value);
       }
-      getPairDetails(fromAssetValue.address, value.address);
+       getPairDetails(fromAssetValue.address, value.address);
     }
   };
 
@@ -474,7 +472,7 @@ export default function Setup() {
                         : "0"}
                     </span>
                   </Typography>
-                  <Button onClick={()=>handleMax(Number(pairDetails.lpBalance).toFixed(5))} style={{ position: 'absolute', marginLeft: "340px", top: '10px', padding: '0' }} variant="text" size="small" >
+                  <Button onClick={()=>handleMax(Number(pairDetails.lpBalance).toFixed(5))} style={{ position: 'absolute', marginLeft: "330px", top: '10px', padding: '0' }} variant="text" size="small" >
                     MAX
                   </Button>
                   <div className={`${classes.massiveInputContainer}`}>
@@ -562,11 +560,8 @@ export default function Setup() {
                           classes.largeInput,
                           classes[`largeInput--${appTheme}`],
                         ].join(" "),
-                      }}
-                      InputProps={{
                         disableUnderline: true,
                       }}
-                      type="number"
                       max
                       fullWidth
                       value={amount}
