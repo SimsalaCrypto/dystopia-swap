@@ -185,7 +185,7 @@ export default function Setup() {
               symbol: symbol,
               token0symbol: token0symbol,
               token1symbol: token1symbol,
-              lpBalance: parseFloat(lpBalance).toFixed(18),
+              lpBalance: parseFloat(lpBalance).toFixed(4),
               totalSupply,
               token0Bal: parseFloat(token0Bal).toFixed(18),
               token1Bal: parseFloat(token1Bal).toFixed(18),
@@ -194,7 +194,7 @@ export default function Setup() {
               poolTokenPercentage: Math.floor(poolTokenPercentage),
             };
 
-            setAmount(parseFloat(lpBalance).toFixed(5));
+            setAmount(parseFloat(lpBalance).toFixed(4));
             setPairDetails(pairDetails);
           } else {
             let pairDetails = {

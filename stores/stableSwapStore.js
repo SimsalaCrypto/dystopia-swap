@@ -2095,18 +2095,6 @@ class Store {
         utcMilllisecondsSinceEpoch / 1000 + 1800
       );
 
-      let func = "migrate";
-      let params = [
-        token0.address,
-        token1.address,
-        isStable,
-        balanceInWei,
-        1,
-        1,
-        utcSecondsSinceEpoch,
-      ];
-      let sendValue = null;
-
       const gasPrice = await stores.accountStore.getGasPrice();
       const allowanceCallsPromises = [];
 
@@ -2190,8 +2178,19 @@ class Store {
         allowanceCallsPromises.push(tokenPromise);
       }
       const done = await Promise.all(allowanceCallsPromises);
-       
-        this._callContractWait(
+      let func = "migrate";
+      let params = [
+        token0.address,
+        token1.address,
+        isStable,
+        balanceInWei,
+        1,
+        1,
+        utcSecondsSinceEpoch,
+      ];
+      let sendValue = null;
+
+      this._callContractWait(
           web3,
           migratorContract,
           func,
