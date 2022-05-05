@@ -1158,12 +1158,11 @@ export default function Setup() {
                   e.target.src = `/tokens/unknown-logo--${appTheme}.svg`;
                 }}
               />
-              {/* <Typography variant='subtitle1' color='primary'>{value ? value.name : type === 'from' ? 'Select Token 0' : 'Select Token 1'}</Typography> */}
             </div>
           </div>
         </div>
         <Dialog
-        // className={classes.blurbg}
+         className={classes.blurbg}
         aria-labelledby="simple-dialog-title"
         open={open}
         onClick={(e) => {

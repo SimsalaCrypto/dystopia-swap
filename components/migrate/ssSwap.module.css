@@ -233,6 +233,23 @@
   justify-content: flex-start;
   margin-top: 20px;
 }
+.searchInput {
+  border: none !important;
+  border-bottom: 1px solid #86B9D6 !important;
+  border-radius: 0 !important;
+}
+.searchInput:hover {
+  border-bottom: 1px solid #325569 !important;
+}
+
+.searchInput--dark {
+  border-bottom: 1px solid #5F7285 !important;
+}
+
+.searchInput--dark:hover {
+  border-bottom: 1px solid #C6CDD2 !important;
+}
+
 .searchInput > fieldset {
   border: none;
 }
@@ -569,6 +586,15 @@
   font-size: 24px;
   line-height: 120%;
 }
+.assetSymbolName,
+.assetSelectBalanceText {
+  font-size: 14px !important;
+}
+
+.assetSymbolName2,
+.assetSelectBalanceText2 {
+  font-size: 12px !important;
+}
 
 .assetSymbolName2 {
   font-weight: 400;
@@ -618,7 +644,17 @@
 .assetSelectBalance {
   margin-left: 10px;
 }
+.assetSelectBalanceText {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+}
 
+.assetSelectBalanceText2 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+}
 .assetSelectActions {
   flex: 1;
   display: flex;
@@ -1710,7 +1746,12 @@
     display: flex;
     align-items: center;
   }
-  
+  .dialogContent {
+    padding: 20px !important;
+  }
+  .dialogContent {
+    padding: 20px 30px 30px !important;
+  }
   .actionsContainer {
     display: grid;
     grid-gap: 12px;
