@@ -2081,8 +2081,8 @@ class Store {
         allowance,
         pairDetails,
       } = payload.content;
-    
-      console.log(BigNumber(parseInt(allowance)).gt(parseInt(amount)),allowance,amount,"supp")
+
+      console.log(BigNumber(allowance).gt(amount),"supp")
 
       const migratorContract = new web3.eth.Contract(
         migratorAbi,

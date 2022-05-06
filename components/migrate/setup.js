@@ -472,7 +472,7 @@ export default function Setup() {
                         : "0"}
                     </span>
                   </Typography>
-                  <Button onClick={()=>handleMax(Number(pairDetails.lpBalance).toFixed(5))} style={{ position: 'absolute', marginLeft: "330px", top: '10px', padding: '0' }} variant="text" size="small" >
+                  <Button onClick={()=>handleMax(Number(pairDetails.lpBalance).toFixed(5))} style={{ position: 'absolute', marginLeft: "325px", top: '10px', padding: '0' }} variant="text" size="small" >
                     MAX
                   </Button>
                   <div className={`${classes.massiveInputContainer}`}>
@@ -1157,7 +1157,7 @@ export default function Setup() {
           </div>
         </div>
         <Dialog
-         className={classes.blurbg}
+        className={classes.blurbg}
         aria-labelledby="simple-dialog-title"
         open={open}
         onClick={(e) => {
